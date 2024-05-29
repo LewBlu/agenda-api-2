@@ -13,7 +13,7 @@ class IssueController extends Controller
      */
     public function index()
     {
-        $issues = Issue::all();
+        $issues = Issue::with(['assignee', 'owner'])->get();
         return response()->json($issues);
     }
 

@@ -44,4 +44,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function assignedIssues() {
+        return $this->hasMany(Issue::class, 'assignee_id');
+    }
+
+    public function ownedIssues() {
+        return $this->hasMany(Issue::class, 'owner_id');
+    }
 }
