@@ -3,7 +3,7 @@
 namespace App\Policies;
 
 use App\Models\User;
-use App\Models\issue;
+use App\Models\Issue;
 use Illuminate\Auth\Access\Response;
 
 class IssuePolicy

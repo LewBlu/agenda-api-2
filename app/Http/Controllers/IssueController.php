@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreissueRequest;
 use App\Http\Requests\UpdateissueRequest;
-use App\Models\issue;
+use App\Models\Issue;
 
 class IssueController extends Controller
 {
