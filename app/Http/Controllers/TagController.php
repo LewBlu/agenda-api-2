@@ -2,19 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreissueRequest;
-use App\Http\Requests\UpdateissueRequest;
-use App\Models\Issue;
+use App\Http\Requests\StoreTagRequest;
+use App\Http\Requests\UpdateTagRequest;
+use App\Models\Tag;
 
-class IssueController extends Controller
+class TagController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $issues = Issue::with(['assignee', 'owner', 'tags'])->get();
-        return response()->json($issues);
+        //
     }
 
     /**
@@ -28,7 +27,7 @@ class IssueController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreissueRequest $request)
+    public function store(StoreTagRequest $request)
     {
         //
     }
@@ -36,7 +35,7 @@ class IssueController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(issue $issue)
+    public function show(Tag $tag)
     {
         //
     }
@@ -44,7 +43,7 @@ class IssueController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(issue $issue)
+    public function edit(Tag $tag)
     {
         //
     }
@@ -52,7 +51,7 @@ class IssueController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateissueRequest $request, issue $issue)
+    public function update(UpdateTagRequest $request, Tag $tag)
     {
         //
     }
@@ -60,7 +59,7 @@ class IssueController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(issue $issue)
+    public function destroy(Tag $tag)
     {
         //
     }

@@ -16,13 +16,13 @@ return new class extends Migration
             $table->string('key');
             $table->string('key_number');
             $table->string('summary');
-            $table->unsignedBigInteger('assignee_id');
-            $table->unsignedBigInteger('owner_id');
+            $table->unsignedBigInteger('assignee_id')->nullable();
+            $table->unsignedBigInteger('owner_id')->nullable();
             $table->date('start_date')->nullable();
             $table->date('due_date')->nullable();
             $table->timestamps();
             
-            $table->foreign('assignee_id')->references('id')->on('users')->nullable();
+            $table->foreign('assignee_id')->references('id')->on('users');
             $table->foreign('owner_id')->references('id')->on('users');
         });
     }
